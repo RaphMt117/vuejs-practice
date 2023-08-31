@@ -23,6 +23,20 @@
                         <h1>{{ product }}</h1>
                         <p v-if="inStock">In Stock</p>
                         <p v-else>Out of Stock</p>
+                        <ul>
+                            <li v-for="detail in details">{{detail}}</li>
+                            <li v-for="variant in variants">{{variant.id}}</li>
+                            <li v-for="variant in variants">{{variant.color}}</li>
+                        </ul>
+                        <div
+                            v-for="variant in variants"
+                            :key="variant.id">
+                            {{variant.color}}
+                        </div>
+                        <ul>
+                            <li>Sizes:</li>
+                            <li v-for="size in sizes">{{size}}</li>
+                        </ul>
                     </div>
                 </div>
             </div>
