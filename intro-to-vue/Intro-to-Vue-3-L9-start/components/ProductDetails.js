@@ -12,4 +12,4 @@ app.component('product-details',{
             <li v-for="detail in details">{{ detail }}</li>
         </ul>
         ` 
-}),
+})
